@@ -13,7 +13,7 @@ public class UsuarioService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    public UsuarioDTO cadastraUsuario(UsuarioDTO usuarioDTO) {
+    public Usuario cadastraUsuario(UsuarioDTO usuarioDTO) {
         Usuario novoUsuario = new Usuario();
         BeanUtils.copyProperties(usuarioDTO, novoUsuario);
         return usuarioRepository.save(novoUsuario);
